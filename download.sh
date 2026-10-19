@@ -5,7 +5,7 @@
 # SPDX-License-Identifier: MIT
 set -u
 BASE="${TORDDOS_BASE_URL:-https://raw.githubusercontent.com/EnovaMaker/tor-ddos-compat/main}"
-FILES="lib.sh rules.sh multi.sh update.sh refresh-authorities.sh compare.sh remove.sh remove-dual-or.sh conntrack.sh"
+FILES="snowflake.txt lib.sh rules.sh multi.sh update.sh refresh-authorities.sh compare.sh remove.sh remove-dual-or.sh conntrack.sh"
 [ "$(id -u)" = 0 ] || { echo "Run this as root (or with sudo)." >&2; exit 1; }
 DEST="$PWD/tor"
 mkdir -p "$DEST"

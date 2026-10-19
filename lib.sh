@@ -61,10 +61,10 @@ load_set() { # setname family listfile
 }
 
 load_all_sets() {
-  local extra="$HERE/allow-extra.txt"
+  local extra="$HERE/allow-extra.txt" snow="$HERE/snowflake.txt"
   # allow-list: directory authorities, plus anything the operator adds by hand
-  { cat "$LISTS_DIR/authorities-v4.txt" "$extra" 2>/dev/null; } | grep -E '^[0-9.]+$' > "$LISTS_DIR/.allow4" || true
-  { cat "$LISTS_DIR/authorities-v6.txt" "$extra" 2>/dev/null; } | grep ':' > "$LISTS_DIR/.allow6" || true
+  { cat "$LISTS_DIR/authorities-v4.txt" "$snow" "$extra" 2>/dev/null; } | grep -E '^[0-9.]+$' > "$LISTS_DIR/.allow4" || true
+  { cat "$LISTS_DIR/authorities-v6.txt" "$snow" "$extra" 2>/dev/null; } | grep ':' > "$LISTS_DIR/.allow6" || true
   ipset create -exist allow-list hash:ip family inet
   ipset create -exist allow-list-v6 hash:ip family inet6
   ipset create -exist dual-or hash:ip family inet

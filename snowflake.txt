@@ -1,0 +1,11 @@
+# Snowflake servers, never limited. One address per line.
+# Source is a post by forest on tor-relays, 13 Sep 2026. Not an official list, so check it
+# against the Tor Project before relying on it. Edit this file if the servers change.
+141.212.118.18
+193.187.88.42
+193.187.88.43
+193.187.88.44
+193.187.88.45
+193.187.88.46
+2a0c:dd40:1:b::42
+2607:f018:600:8:be30:5bff:fef1:c6fa
