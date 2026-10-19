@@ -1,0 +1,13 @@
+name: ci
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: "0 5 * * *"
+jobs:
+  vm-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: DeterminateSystems/nix-installer-action@v14
+      - run: nix build .#checks.x86_64-linux.compat -L
