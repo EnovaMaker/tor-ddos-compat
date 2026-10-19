@@ -93,8 +93,8 @@ pkgs.testers.runNixOSTest {
 
     with subtest("the authorities list fills the allow list"):
         assert bip in relay.succeed("ipset list allow-list")
-        assert "193.187.88.42" in relay.succeed("ipset list allow-list"), "snowflake.txt not loaded"
-        assert "2a0c:dd40:1:b::42" in relay.succeed("ipset list allow-list-v6 || true"), "snowflake v6 not loaded"
+        assert "193.187.88.46" in relay.succeed("ipset list allow-list"), "snowflake.txt not loaded"
+        assert "2a0c:dd40:1:b::46" in relay.succeed("ipset list allow-list-v6 || true"), "snowflake v6 not loaded"
 
     def run(m, want, extra):
         return json.loads(m.succeed(f"python3 ${scenario} {rip} 19001 {want} {extra}"))

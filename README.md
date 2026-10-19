@@ -45,8 +45,9 @@ Needs `iptables`, `ipset` and `curl`; on Debian and Ubuntu it installs what is m
   "a third open connection" cannot be the trigger. Here it is *repeated refusals*: more than ten
   refused attempts, then more than ten per minute.
 - **Snowflake.** The consensus does not list Snowflake servers, so `snowflake.txt` carries their
-  addresses by hand. It comes from a post on tor-relays (13 Sep 2026), not from the Tor Project: check
-  it, and edit the file if the servers change. Your own additions go in `allow-extra.txt`.
+  addresses by hand: `snowflake-01` (five outbound addresses, from Tor Project issue 40223) and
+  `snowflake-02` (checked in DNS on 19 Oct 2026). If the Tor Project changes them, edit the file.
+  Your own additions go in `allow-extra.txt`.
 - **Kernel settings** (`tcp_fin_timeout`, SYN cookies, port range, SYN backlog) are applied at run
   time only. Make them permanent in `/etc/sysctl.d/` if you want them to survive a reboot.
 

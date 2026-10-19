@@ -1,6 +1,7 @@
-# Snowflake servers, never limited. One address per line.
-# Source is a post by forest on tor-relays, 13 Sep 2026. Not an official list, so check it
-# against the Tor Project before relying on it. Edit this file if the servers change.
+# Snowflake servers, never limited. One address per line. Edit if the servers change.
+# snowflake-01 outbound addresses .42 to .46, from Tor Project issue 40223 (comment of 26 Oct 2022).
+# snowflake-01 and snowflake-02 are the DNS names snowflake-01 and snowflake-02 under torproject.net,
+# checked on 19 Oct 2026. The .43 to .46 addresses are not in DNS, only in that issue.
 141.212.118.18
 193.187.88.42
 193.187.88.43
@@ -8,4 +9,8 @@
 193.187.88.45
 193.187.88.46
 2a0c:dd40:1:b::42
+2a0c:dd40:1:b::43
+2a0c:dd40:1:b::44
+2a0c:dd40:1:b::45
+2a0c:dd40:1:b::46
 2607:f018:600:8:be30:5bff:fef1:c6fa
