@@ -1,13 +1,13 @@
 # tor-ddos-compat
 
 **Connection limits for a Tor relay's ORPort on any Debian or Ubuntu box, with the same commands
-the stopped `tor-ddos` scripts had.** Independent reimplementation; no code from that project.
+the stopped [`tor-ddos`](https://github.com/Enkidu-6/tor-ddos) scripts had.** Independent reimplementation; no code from that project.
 
 ```sh
 bash <(curl -Ls https://raw.githubusercontent.com/EnovaMaker/tor-ddos-compat/main/download.sh)
 ```
 
-## If you used `Enkidu-6/tor-ddos`
+## If you used [`Enkidu-6/tor-ddos`](https://github.com/Enkidu-6/tor-ddos)
 
 That project was shut down in May 2026 and its relay lists went with it, so the scripts now run
 against lists that are no longer updated. **Moving over takes one command:** run the line above from
